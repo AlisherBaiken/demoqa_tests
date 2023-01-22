@@ -43,5 +43,5 @@ public class JUnitTest {
                 Assertions.assertTrue(3 > 2);
             }
         }
-    }
-}
+
+
