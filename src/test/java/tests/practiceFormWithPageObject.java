@@ -53,21 +53,16 @@ public class practiceFormWithPageObject extends TestBase {
                 .setEmail("123@mail.ru")
                 .setGender("Male")
                 .setPhone("8777777777")
-                .setBirthday("30","July","2008");
-
-
-
-        $("#subjectsInput").setValue("Math").pressEnter();
-        $("#hobbiesWrapper").$(byText("Reading")).click(); // po yazykam ne proidet good way
-        $("#uploadPicture").uploadFromClasspath("img/1.png");// esli fail v resurce
-        $("#currentAddress").setValue("Alatau");
-        $("#state").click();
-        $("#stateCity-wrapper").$(byText("NCR")).click();
-        $("#city").click();
-        $("#stateCity-wrapper").$(byText("Noida")).click();
-        $("#submit").click();
+                .setBirthday("30","July","2008")
+                .setSubject("Math")
+                .setHobbies("Reading")
+                .uploadPicturue("img/1.png")
+                .setCurrentAddress("Alatau")
+                .setState("NCR")
+                .setCity("Noida")
+                .clickSumbit();
         RegistrationPage.verifyResultModalAppear()
-                .verifyResult("Student Name", userName + "Baikenov")
+                .verifyResult("Student Name", userName + " Baikenov")
                 .verifyResult("Student Email", "123@mail.ru") // mojem proverit vse
                 .verifyResult("Gender", "Male")
                 .verifyResult("Mobile", "8777777777")

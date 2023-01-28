@@ -56,6 +56,36 @@ public class registrationPage {
         calendarCompanents.setDate(day, month, year);
         return this;
     }
+    public registrationPage setSubject(String value){
+        $("#subjectsInput").setValue(value).pressEnter();
+        return this;
+    }
+    public registrationPage setHobbies(String value){
+        $("#hobbiesWrapper").$(byText(value)).click();
+        return this;
+    }
+    public registrationPage uploadPicturue(String value){
+        $("#uploadPicture").uploadFromClasspath(value);
+        return this;
+    }
+    public registrationPage setCurrentAddress(String value){
+        $("#currentAddress").setValue(value);
+        return this;
+    }
+    public registrationPage setState(String value){
+        $("#state").click();
+        $("#stateCity-wrapper").$(byText(value)).click();
+        return this;
+    }
+    public registrationPage setCity(String value){
+        $("#city").click();
+        $("#stateCity-wrapper").$(byText(value)).click();
+        return this;
+    }
+    public void  clickSumbit(){
+        $("#submit").click();
+
+    }
     public registrationPage verifyResultModalAppear(){
         registrationResultModal.verifyModalAppear();
         return this;

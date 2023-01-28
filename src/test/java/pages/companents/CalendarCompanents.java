@@ -1,5 +1,6 @@
 package pages.companents;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CalendarCompanents {
@@ -10,4 +11,5 @@ public class CalendarCompanents {
         $(".react-datepicker__day--0" + day +
                 ":not(.react-datepicker__day--outside-month)").click();
     }
+
 }
